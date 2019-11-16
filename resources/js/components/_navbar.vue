@@ -4,6 +4,104 @@
     <v-toolbar-title>Laravel Vue Admin</v-toolbar-title>
     <v-spacer></v-spacer>
 
+    <!-- dropdown starts -->
+<!--      <div class="text-center">
+      <v-menu offset-y>
+        <template v-slot:activator="{ on }">
+          <v-btn
+            color="primary"
+            dark
+            v-on="on"
+          >
+            Dropdown
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="(item, index) in items"
+            :key="index"
+            @click=""
+          >
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+  </div> -->
+    <!-- dropdown ends -->
+
+    <!--Navbar start-->
+<!-- <v-toolbar-items>
+  <v-list dense>
+    <v-list-tile exact to="/admin">
+      <v-list-tile-action>
+        <v-icon>dashboard</v-icon>
+      </v-list-tile-action>
+      <v-list-tile-content>
+        <v-list-tile-title>Dashboard</v-list-tile-title>
+      </v-list-tile-content>
+    </v-list-tile>
+      
+      <v-spacer></v-spacer>
+       
+    <v-list-group no-action>
+      <v-list-tile slot="activator">
+        <v-list-tile-action>
+          <v-icon>account_circle</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>User Management</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+
+      <v-list-tile to="/admin/users">
+        <v-list-tile-action>
+          <v-icon>account_circle</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>Users</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+
+      <v-list-tile to="/admin/roles">
+        <v-list-tile-action>
+          <v-icon>account_circle</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>Roles</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+
+      <v-list-tile to="/admin/permissions">
+        <v-list-tile-action>
+          <v-icon>account_circle</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>Permissions</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+    </v-list-group>
+
+    <v-list-tile to="/admin/activities">
+      <v-list-tile-action>
+        <v-icon>settings</v-icon>
+      </v-list-tile-action>
+      <v-list-tile-content>
+        <v-list-tile-title>Activities</v-list-tile-title>
+      </v-list-tile-content>
+    </v-list-tile>
+
+    <v-list-tile to="/admin/settings">
+      <v-list-tile-action>
+        <v-icon>settings</v-icon>
+      </v-list-tile-action>
+      <v-list-tile-content>
+        <v-list-tile-title>Settings</v-list-tile-title>
+      </v-list-tile-content>
+    </v-list-tile>
+  </v-list>
+</v-toolbar-items> -->
+    <!--nabar menu end-->
+
     <v-menu
       offset-y
       origin="center center"
@@ -63,6 +161,7 @@ export default {
     allNotifications: [],
     unreadNotifications: [],
   }),
+  
   props: ["user"],
   watch:{
       allNotifications(val){

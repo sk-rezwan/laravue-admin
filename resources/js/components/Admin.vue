@@ -5,7 +5,8 @@
         <sidebar></sidebar>
       </v-navigation-drawer>
 
-      <navbar :user="user"></navbar>
+      <!-- <navbar :user="user"></navbar> -->
+      <toolbar :user="user"></toolbar>
 
       <v-content>
         <v-container fluid fill-height>
@@ -25,10 +26,11 @@
 
 <script>
 import Sidebar from "./_sidebar";
-import Navbar from "./_navbar";
+//import Navbar from "./_navbar";
+import Toolbar from "./_toolbar";
 
 export default {
-  components: { Sidebar, Navbar },
+  components: { Sidebar, Toolbar },
   data: () => ({
     drawer: null
   }),

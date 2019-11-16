@@ -67,7 +67,7 @@ const routes = [
   {
       path: '/admin/activities',
       component: Activities
-  }
+  },
 ];
 
 const router = new VueRouter({
