@@ -32,7 +32,7 @@ import Toolbar from "./_toolbar";
 export default {
   components: { Sidebar, Toolbar },
   data: () => ({
-    drawer: null
+    drawer: false
   }),
   props: ["user"]
 };

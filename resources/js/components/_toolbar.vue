@@ -24,7 +24,7 @@
             <v-list-tile-title>Settings</v-list-tile-title>
         </v-list-tile>
 
-      </v-toolbar-items>
+      
 
      <!--navigation ends here-->
       <!-- <template v-if="$vuetify.breakpoint.smAndUp">
@@ -40,29 +40,20 @@
       </template> -->
 
       <!-- dropdown -->
-      <div class="text-center">
-    <v-menu offset-y>
-      <template v-slot:activator="{ on }">
-        <v-btn
-          color="primary"
-          dark
-          v-on="on"
-        >
-          User Management
+      <v-menu offset-y>        
+        <v-btn flat slot="activator" color="grey">
+        <v-icon left>expand_more</v-icon>
+        <span>User Management</span> 
         </v-btn>
-      </template>
-      <v-list>
-        <v-list-item
-          v-for="(item, index) in items"
-          :key="index"
-          @click=""
-        >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
-  </div>
-      <v-spacer></v-spacer>
+        <v-list>
+          <v-list-tile v-for="item in items" :key="item.title" router :to="item.router">
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+
+      </v-menu>
+      </v-toolbar-items>
+
       <v-spacer></v-spacer>
       
       <!--logout-->
@@ -99,15 +90,18 @@
 
 <script>
 export default {
-  props: ["user"],
+    // props: ["user"],
 
-  data: () => ({
-      items: [
-        { title: 'Users', route: '/admin/users' },
+  data(){
+      return {
+        drawer: false,
+        items: [
+        { title: 'User', route: '/admin/users' },
         { title: 'Role', route: '/admin/roles' },
-        { title: 'Permission', route: '/admin/permissions' },
-      ],
-    }),
+        { title: 'Permission', route: '/admin/permissions' }
+      ]
+    }
+  },
 
 
 
@@ -117,7 +111,7 @@ export default {
   //   unreadNotifications: [],
   // }),
   
-  props: ["user"],
+    props: ["user"],
   // watch:{
   //     allNotifications(val){
   //         this.unreadNotifications =  this.allNotifications.filter(notification => {
@@ -148,5 +142,5 @@ export default {
   //     this.allNotifications.unshift(notification.notification);
   //   });
   // }
-};
+}
 </script>
