@@ -45,11 +45,32 @@
         <v-icon left>expand_more</v-icon>
         <span>User Management</span> 
         </v-btn>
-        <v-list>
-          <v-list-tile v-for="item in items" :key="item.title" router :to="item.router">
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
+        <v-list-tile to="/admin/users">
+        <v-list-tile-action>
+          <v-icon>account_circle</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>Users</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+
+      <v-list-tile to="/admin/roles">
+        <v-list-tile-action>
+          <v-icon>account_circle</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>Role</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+
+      <v-list-tile to="/admin/permissions">
+        <v-list-tile-action>
+          <v-icon>account_circle</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>Permission</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
 
       </v-menu>
       </v-toolbar-items>
@@ -92,16 +113,16 @@
 export default {
     // props: ["user"],
 
-  data(){
-      return {
-        drawer: false,
-        items: [
-        { title: 'User', route: '/admin/users' },
-        { title: 'Role', route: '/admin/roles' },
-        { title: 'Permission', route: '/admin/permissions' }
-      ]
-    }
-  },
+  // data(){
+  //     return {
+  //       drawer: false,
+  //       items: [
+  //       { title: 'User' },
+  //       { title: 'Role' },
+  //       { title: 'Permission'}
+  //     ]
+  //   }
+  // },
 
 
 
@@ -142,5 +163,5 @@ export default {
   //     this.allNotifications.unshift(notification.notification);
   //   });
   // }
-}
+};
 </script>

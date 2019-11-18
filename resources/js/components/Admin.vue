@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <v-app id="inspire">
-      <v-navigation-drawer clipped fixed v-model="drawer" app>
+      <!-- <v-navigation-drawer clipped fixed v-model="drawer" app>
         <sidebar></sidebar>
-      </v-navigation-drawer>
+      </v-navigation-drawer> -->
 
       <!-- <navbar :user="user"></navbar> -->
       <toolbar :user="user"></toolbar>
@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import Sidebar from "./_sidebar";
+//import Sidebar from "./_sidebar";
 //import Navbar from "./_navbar";
 import Toolbar from "./_toolbar";
 
 export default {
-  components: { Sidebar, Toolbar },
+  components: {Toolbar },
   data: () => ({
     drawer: false
   }),
