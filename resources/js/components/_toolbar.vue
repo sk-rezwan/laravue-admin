@@ -1,9 +1,7 @@
 <template>
   <div>
     <v-toolbar>
-      <v-toolbar-title>Title</v-toolbar-title>
-
-      <v-spacer></v-spacer>
+      <v-toolbar-title>CDIP| 360</v-toolbar-title>
 
       <!-- navigation starts here-->
         <v-toolbar-items>
@@ -14,7 +12,7 @@
         
 
         <v-list-tile to="/admin/activities">
-          <v-icon>settings</v-icon>
+          <v-icon>folder_open</v-icon>
             <v-list-tile-title>Activities</v-list-tile-title>
         </v-list-tile>
       
@@ -45,25 +43,25 @@
         <v-icon left>expand_more</v-icon>
         <span>User Management</span> 
         </v-btn>
-        <v-list-tile to="/admin/users">
+        <v-list-tile class="grey lighten-4" to="/admin/users">
         <v-list-tile-action>
-          <v-icon>account_circle</v-icon>
+          <v-icon>person</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>Users</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
 
-      <v-list-tile to="/admin/roles">
+      <v-list-tile class="grey lighten-4" to="/admin/roles">
         <v-list-tile-action>
-          <v-icon>account_circle</v-icon>
+          <v-icon>person</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>Role</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
 
-      <v-list-tile to="/admin/permissions">
+      <v-list-tile class="grey lighten-4" to="/admin/permissions">
         <v-list-tile-action>
           <v-icon>account_circle</v-icon>
         </v-list-tile-action>
